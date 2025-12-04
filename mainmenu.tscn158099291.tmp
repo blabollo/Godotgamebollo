@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb7nripcr161h"]
+
+[ext_resource type="Script" uid="uid://bhl1ugo3wt0fe" path="res://mainmenu.gd" id="1_dihg0"]
+
+[node name="Mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dihg0")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 242.0
+offset_right = 949.0
+offset_bottom = 430.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start game"
+
+[node name="LevelSelectButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level Select"
+
+[node name="OptionButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_credits_button_pressed"]

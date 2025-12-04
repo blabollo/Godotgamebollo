@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://docnewa30dex7"]
+
+[ext_resource type="Script" uid="uid://luq7pxttfv24" path="res://level_select.gd" id="1_twgyq"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -46.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_twgyq")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 229.0
+offset_right = 657.0
+offset_bottom = 392.0
+columns = 5
+
+[node name="Level1" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Level 1"
+expand_icon = true
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 485.0
+offset_right = 608.0
+offset_bottom = 516.0
+text = "Back"
+
+[connection signal="pressed" from="GridContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

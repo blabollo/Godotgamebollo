@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://4fhfatvvesv7"]
+
+[ext_resource type="Script" uid="uid://bc7vtm4ucsyg0" path="res://AudioManager.gd" id="1_5x0uh"]
+[ext_resource type="AudioStream" uid="uid://do35e3fe1qcit" path="res://audio/arp.wav" id="2_mev0m"]
+[ext_resource type="AudioStream" uid="uid://bq1mfyhgk2dcs" path="res://audio/bass.wav" id="3_dyjto"]
+[ext_resource type="AudioStream" uid="uid://d2fba65w3p021" path="res://audio/counter melody.wav" id="4_w2pua"]
+[ext_resource type="AudioStream" uid="uid://cyh0h1orjja3i" path="res://audio/drums.wav" id="5_yjd6q"]
+[ext_resource type="AudioStream" uid="uid://dwxtgbumiqa6e" path="res://audio/melody.wav" id="6_udwei"]
+[ext_resource type="AudioStream" uid="uid://dtdkirrase03y" path="res://audio/percs.wav" id="7_58b0s"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_5x0uh")
+
+[node name="ArpPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mev0m")
+
+[node name="BassPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dyjto")
+
+[node name="CounterPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_w2pua")
+
+[node name="DrumsPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_yjd6q")
+
+[node name="PercPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_58b0s")
+
+[node name="MelodyPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_udwei")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
